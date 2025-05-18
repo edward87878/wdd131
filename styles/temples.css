@@ -63,7 +63,7 @@ footer p {
 }
 
 /* small view navigation */
-#menu {
+#hamburger {
     font-size: 1.5rem;
     border: 0;
     background: none;
@@ -73,12 +73,12 @@ footer p {
     right: 15px;
 }
 
-#menu::before {
+#hamburger::before {
     content: "☰";
     color: white;
 }
 
-#menu.open::before {
+#hamburger.open::before {
     content: "x";
 }
 
