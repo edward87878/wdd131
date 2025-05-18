@@ -16,13 +16,13 @@ header {
     align-items: center;
 }
 
-header p {
+h1 {
     text-align: left;
     font-size: 2rem;
     margin-left: 1rem;
 }
 
-h1 {
+h2 {
     font-size: 1.5rem;
     color: black;
     text-align: left;

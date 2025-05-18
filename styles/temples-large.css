@@ -1,11 +1,11 @@
 @media (min-width: 37.5em) {
-    header p {
+    h1 {
         text-align: left;
         font-size: 2rem;
         margin-left: 1rem;
     }
 	
-	h1 {
+	h2 {
 		font-size: 2rem;
 		text-align: center;
 	}
