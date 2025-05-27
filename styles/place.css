@@ -46,7 +46,6 @@ h2 {
     text-decoration: underline;
 }
 
-
 @media (min-width: 1000px) {
 
     .data {
@@ -60,9 +59,9 @@ h2 {
         color: var(--secondary-color);
         text-align: left;
         text-decoration: none;
-        background-color: black;
+        /* background-color: black; */
         display: inline;
-        margin-right: 20px;
+        /* margin-right: 20px; */
     }
 
     .weather {
