@@ -91,7 +91,8 @@ h2 {
 
     .data,
     .weather {
-        background-color: rgba(0, 0, 0, 0.7);
+        /* background-color: rgba(0, 0, 0, 0.7); */
+        background-color: rgba(0, 71, 171, 0.7);
         padding-left: 20px;
         padding-right: 20px;
     }
