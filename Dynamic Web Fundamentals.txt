@@ -1,0 +1,211 @@
+Dynamic Web Fundamentals
+
+Week 3 Points:
+
+=== Design Principles ===
+
+1. Spacing, sizing, positioning, all help to make things look nice and be accessible for users
+
+2. Other things to consider:
+  - Typography: 2 or 3 fonts at maximum. Should be variants of each other
+  - Colors: Color scheme that's visually appealing and conveys mood. Color contrast matters
+  - Clarity: keep design clean and uncluttered. Use ample whitespace. Do not be wordy. Use visuals. 
+  - Consistency: maintain consistent visual language (similar looking pages at different levels of the website). 
+  - Visual Hierarchy: Clear hierarchy of info as the people progress down your page
+  - Accessibility: Keep people with handicaps in mind
+  - Feedback: Provide feedback to users when they click on things, hover over things, etc. Constant communications.
+  - User-centric design: Needs and preferences of your users should be how you design things, not how you like it
+  - Visual Appeal: High quality images, engaging animations, attractive typography
+
+=== Pseudo Classes and Pseudo Elements === 
+Pseudo class 
+- something changes on specific action (like mouse over)
+- Has 1 colon between end of typical css class and the pseudo class designation.
+
+Pseudo Element
+- Targets specific aspect of a class (helps narrow it down to specific part, like first half of word)
+
+=== Icon Types ===
+
+jpg - common, compressed, pixel based so does not scale well
+
+png - common, not compressed, good if need a see through where the background can be swapped out
+
+gif - common, not compressed, basic animations, supports 256 colors
+
+webp - replacement for jpg, placed by google. pixel based like others above still but more compressed and functional. also replaces gif. good support
+
+heic - not sure of special features. common on iphones and some androids. not great browser support yet
+
+svg - vector instead of pixel based. for simple images like icons. Can grow or shrink to whatever size and maintain same clarity
+
+=== Responsive Images ===
+
+Use different image files (with different default sizes) as your viewpoint changes
+
+srcset attribute: 
+
+<img
+  src="clock-demo-200px.png"
+  alt="The time is 12:45."
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(max-width: 600px) 200px, 50vw" />
+
+ Added into HTML, supersedes the src attribute, and applies based on the viewpoint size of the screen. This is nice since can all be done in one statement/
+
+ It's smart to use the 'rule of thirds' to crop images instead of just resizing them, since it helps the user of your website focus on what you want them to focus on in the image.
+
+<picture>
+  <source srcset="images/hero-large.webp" media="min-width: 1000px">
+  <source srcset="images/hero-medium.webp" media="min-width: 550px">
+  <img src="images/hero-small.webp" alt="Orem Utah Temple" width="400" height="200">
+</picture>
+
+ Can add in a few source elements above the standard image element to modify what displays based on the viewpoint. Can place this all in the picture element. 
+
+ Note that this goes from largest image to smallest image, instead of the using the 'mobile first' approach. This is 'desktop first'.
+
+ Something learned .. you need to list the srcset attribute first, before the media attribute, for this to work.
+ For my private example, arrived at the following:
+
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
+                <img src="images/hero-small.webp" alt="Brigham City Temple" width="500" height="250">                
+            </picture>
+
+=== JavaScript Arrays ===
+
+Declaring arrays in JavaScript:
+ let scores = [100, 72, 83, 94];
+ let names = ['nancy', 'bart', 'jorge'];
+ so: let names = []; with number or string content
+
+Zero based index
+ First item in array set at 0, second at 1, etc
+ -1 last in the array
+
+Assigning new items to an array
+ let aScore = scores[0];
+  creates variable with value from that point in the array
+
+ scores[0] = 99;
+  overwrites the value in the array to the new value stated
+
+A couple ways to loop through an array. The second is preferred:
+
+for (let i = 0; i < scores.length; i++) {
+  console.log(scores[i]);
+}
+
+scores.forEach(function(score) {
+  console.log(score);
+});
+
+Length property of arrays:
+
+let numScores = scores.length; // The numScores variable is assigned the value of 6 
+
+Methods that can manipulate arrays:
+
+scores.push(100); // Adds a new element to the end of the array
+scores.pop(); // Removes the last element from the array
+scores.shift(); // Removes the first element from the array
+scores.unshift(100); // Adds a new element to the beginning of the array
+scores.slice(2,3); // Cut out a portion of the array starting at an index for a given length
+scores.splice(2, 1); // Removes 1 element from the array starting at index 2
+scores.join(', '); // transform the array into a single string with a comma and space delimiter option
+
+=== Javascript Functions ===
+
+Creating a function in JavaScript:
+
+function square(number) {
+  return number * number;
+}
+
+Some rules for functions:
+- When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function
+
+- When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function
+
+- Function declarations and expressions can be nested, which forms a scope chain. For example:
+
+js
+Copy to Clipboard
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+
+- Functions don't need to have names, and can be created on the fly:
+
+const square = function (number) {
+  return number * number;
+};
+
+console.log(square(4)); // 16
+
+- Or you can give them a name in the expression they are being created in:
+
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
+
+console.log(factorial(3)); // 6
+
+- Once a function is named or created, you can call it simply with the following:
+
+square(5); .. which is the name of the function and any parameter you are passing into it, closed with the semi-colon
+
+A function can call itself .. not sure why you would want to do this:
+
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+You could then compute the factorials of 1 through 5 as follows:
+
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
+
+I imagine I'll need to use this at some point
+
+You can call a function before it is defined, since JavaScript processes everything before it takes a specific action.
+
+function fullname(first, last) {
+  let fullname = ""
+  fullname = first + last
+  return fullname
+
+}
+
+Given the following code snippet:
+
+let firstName = 'Antonia';
+let lastName = 'Francesca';
+Write a function declaration / definition named fullName that has two parameters named first and last. The function's purpose is to combine those two string parameters together to return one combined string (a 'full' name) with a space between the first and last variables.
+Answer
+function fullName(first, last) {
+  return `${first} ${last}`;   // string concatenation first + ' ' + last (not preferred)
+}
+Use an anonymous function expression to do the same thing where the function is assigned to a variable named fullName.
+Answer
+const fullName = function (first, last) {
+  return `${first} ${last}`;
+}
+Use an arrow function expression to do the same thing where the function is assigned to a variable named fullName.
+Answer
+const fullName = (firstName, lastName) => `${firstName} ${lastName}`;
+Write an expression that calls the fullName function declaration and writes the result to an existing HTML element's text node with the ID of fullName
+Answer
+document.querySelector('#fullName').innerHTML = fullName(firstName, lastName);
+

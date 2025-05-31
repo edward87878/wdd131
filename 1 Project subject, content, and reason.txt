@@ -1,0 +1,27 @@
+Take care of Web first part of this week
+
+Take care of Python first part of this week
+
+Take care of Accounting, first part of this week
+
+Take care of Religion, first part of this week
+
+Head home for the evening
+
+Make plans for tomorrow
+
+Sleep
+
+===
+
+Subject: 
+
+The people of the IT Department of Mountainland Supply
+
+Succinctly describe the planned content of the website:
+
+A website that describes aspects of my coworkers, though does so using no clicking, but reveals additional information about subjects with popups as one hovers over images, and other popups. I will be using false images and names to protect the privacy of my coworkers.
+
+The reason you chose this subject:
+
+It is a subject on which I am familiar. I also saw a website that did this once upon a time and would like to create my own version of it.
