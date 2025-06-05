@@ -1,0 +1,62 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+
+body {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+main {
+    border: 1px solid black;
+}
+
+
+a:link {
+    color: lightblue;
+}
+
+a:visited {
+    color: yellow;
+}
+
+footer {
+    color: whitesmoke;
+    background-color: navy;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+header {
+    background-color: navy;
+    color: white;
+}
+
+#logo {
+    position: relative;
+    float: left;
+    display: inline;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#domain_info {
+    text-align: right;
+    margin-right: 20px;
+}
+
+h2 {
+    display: block;
+    background-color: navy;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 0;
+}

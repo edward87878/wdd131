@@ -134,7 +134,7 @@ function renderTemples(filteredTemples) {
         <p>LOCATION: ${temple.location}</p>
         <p>DEDICATED: ${temple.dedicated}</p>
         <p>AREA: ${temple.area.toLocaleString()} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="auto" width="300" height="200">
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="200">
       </div>`;
     });
 }
