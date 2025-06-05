@@ -37,6 +37,8 @@ header {
     position: relative;
     float: left;
     display: inline;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 h1 {
