@@ -42,16 +42,16 @@
                 <input type="radio" id="one" name="rating" value="one" required>
                 <label for="one">1</label>
 
-                <input type="radio" id="two" name="rating" value="two" required>
+                <input type="radio" id="two" name="rating" value="two">
                 <label for="two">2</label>
 
-                <input type="radio" id="three" name="rating" value="three" required>
+                <input type="radio" id="three" name="rating" value="three">
                 <label for="three">3</label>
 
-                <input type="radio" id="four" name="rating" value="four" required>
+                <input type="radio" id="four" name="rating" value="four">
                 <label for="four">4</label>
 
-                <input type="radio" id="five" name="rating" value="five" required>
+                <input type="radio" id="five" name="rating" value="five">
                 <label for="five">5</label>
             </div>
 
@@ -67,16 +67,18 @@
                 Which features did you find useful in this product?<br>
                 (Check all that apply)
 
-                <label><input type="checkbox">Durability</label>
-                <label><input type="checkbox">Ease of Use</label>
-                <label><input type="checkbox">Performance</label>
-                <label><input type="checkbox">Design</label>
+                <label for="durability"><input type="checkbox" id="durability" name="durability"
+                        value="durability">Durability</label>
+                <label for="easeofuse"><input type="checkbox" id="easeofuse" name="easeofuse" value="easeofuse">Ease of
+                    Use</label>
+                <label for="perfomance"><input type="checkbox" id="performance" name="performance"
+                        value="performance">Performance</label>
+                <label for="design"><input type="checkbox" id="design" name="design" value="design">Design</label>
             </div>
 
-
             <div>
-                <label>Written Review <span class="optional">(Optional)</span></label>
-                <div><textarea></textarea></div>
+                <label for="textarea">Written Review <span class="optional">(Optional)</span></label>
+                <div><textarea id="textarea" name="textarea" value="textarea"></textarea></div>
             </div>
             <div>
                 <label>Your name <span class="optional">(Optional)</span></label>
