@@ -1,0 +1,65 @@
+Storage
+=======
+
+. Can store values and other items as key/pairs in Storage within a browser js program
+
+Storage.length
+  Returns number of items stored in the Storage object
+
+Storage.key(n)
+  Returns name of nth key in the Storage object
+
+Storage.getItem(key)
+  Returns value based on name of key passed
+
+Storage.setItem(key)
+  Changes value for given key name, or, if key does not 
+  exist, creates new key/value pairing in Storage
+
+Storage.removeItem(key)
+  Removes the key value pair for the passed key
+
+Storage.clear()
+  Removal all key/value pairs from Storage
+
+===============
+
+Different storage methods:
+
+Cookies
+. have about 4 KB of capacity
+. Expiration timeframe is manually set
+. Accessible from any window
+
+localStorage
+. have about 5 MB of capacity
+. Never expires
+. Accessible from any window
+
+sessionStorage
+. have about 5 MB of capacity
+. Expires when tab or window closes
+. Accessible from same tab
+
+* Each of the above stores data in the client browser, rather than on a server somewhere
+
+================
+
+localStorage better than cookies
+
+- more intuitive
+- stores string data in key/value pairs
+- data persists without expiring. stays in browser
+
+=================
+
+Notes for using Local Storage
+
+. since stores in strings, need to convert to strings to store, and from strings when retrieving
+
+. Way to do this is the following:
+
+JSON.stringify() ... converts a value to a string
+JSON.parse() .. converts back to non-string value
+
+=================

@@ -1,0 +1,45 @@
+<form> </form>
+
+. Forms allow the site users to communicate back to the site owner.
+. Delicate balance between Pain and Reward when users are inputting stuff into web forms
+. Pain of completing the form needs to be less than the reward for having done so. This is why people complete forms on websites when buying stuff they want, but are less than willing to complete surveys. Surveys require perhaps the same amount of effort, but there is no reward for having done so.
+
+. Labeling: 
+ . Form title should be present (people should be able to know the purpose of the form from this title)
+ . Never use word "Submit" in a form. Reword it to be something the end user understands
+ . Phrase "I want to:" and complete the sentence. What follows is name of the form element for the user
+. Content:
+ . Remove unnecessary questions. Keep as simple as possible
+ . If want to collect more .. make only some things required, other things are not mandatory
+ . Clearly identify required fields with the red asterisk
+. Layout rules:
+ . Labels should be above and left aligned to the field of entry. Less eye movement for users
+ . Form should be in a single column
+ . Okay to have empty space off to the right side
+. Inputs:
+ . Use single input for phone number that accommodates any number length or style
+ . Don't divide phone numbers into area code and main, since that does not exist everywhere
+ . Use Radio buttons for 5 or less options
+ . Use dropdown for more than 5 options
+ . Use placeholder text for clarity, but not as a replacement for labels. Keep the labels.
+ . If you do remove the title, placeholder text needs to appear above the input so people don't lose track
+ . Order choices logically
+ . For example, days of the week, put in their order. Otherwise, alphabetize things
+ . Wrap all inputs in labels so that clicking or touching the input or label will get access to the input
+ . Never use a Reset button on your form page
+. Submission:
+ . After form processed, show a confirmation page
+. Design:
+ . Beautiful design inspires confidence in person filling out the form
+ . Input height needs to be large enough for easy use. Min 44px height to make touch ready 50px is a good happy spot that you can easily remember
+ . Group related info. Placement of items seem logical to your users
+ . Label should be close to their inputs so it is clear what label applies to which input
+ . Break larger forms into fieldsets, so that related content is grouped, and easier for brains to process the info
+
+
+Example of input wrapped in a label for simplicity in programming:
+
+<label class='top'><div>Last Name*</div><input type="text" name="lname" required></label>
+
+. Way simpler than how we learned how to do this the first time
+

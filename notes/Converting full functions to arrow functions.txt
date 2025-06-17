@@ -1,0 +1,41 @@
+Converting full functions to arrow functions
+============================================
+
+Arrow Functions
+Arrow functions are syntactically compact alternatives to the regular function expression. It is a modern style of writing function that is more compact.
+
+How to write arrow functions?
+Consider a simple function expression that calculate the square of a number as shown in the example below.
+
+const square = function(num) {
+    return num * num;
+}
+Now to convert the above function into arrow function do the following steps…
+
+Remove the function keyword.
+write the function definition after arrow (=>)
+Parenthesis() are optional for one argument.
+For one-liner function, it is optional to enclose statement into block, also return statement are optional for one-liner functions.
+// Arrow function
+const square = (num) => {
+    return num * num;
+}
+// Without parenthesis
+const square = num => {
+    return num * num;
+}
+// Implicit Return - one liner
+const square = num => num * num;
+Arrow function makes it easy to write the callback function with compact syntax. Let’s review some to the examples discussed above with arrow function.
+
+Example-1:
+const nums = [1,2,3,4,5];
+nums.forEach(num => console.log(num * num));
+Example-2:
+const nums = [1,2,3,4,5,6];
+const squareNums = nums.map(num => num * num);
+console.log(squareNums); // [1, 4, 9, 16, 25, 36]
+Example-3:
+const nums = [11,2,3,5,4,7,8,10];
+const parityList = nums.map(num => (num%2===0 ? 0 : 1));
+console.log(parityList); // [1, 0, 1, 1, 0, 1, 0, 0]

@@ -1,0 +1,7 @@
+Pretty simple. Add the attribute loading="lazy" to the things you don't want loaded immediately.
+
+<img src="images/anyphoto.jpg" alt="A good description of the non decorative image" loading="lazy" width="300" height="500">
+
+loading="eager" is the other one, and doesn't need to be added since it is the default.
+
+Can use css effects to get the image to fade in
